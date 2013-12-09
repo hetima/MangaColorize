@@ -28,8 +28,8 @@ ARC・非ARC 両対応です。
 あるいはインスタンスを生成せず1行で済ますこともできます。
 
 ```
-    //インスタンスを生成しない方法
-    NSImage* output=[HTMangaColorize colorizeImage:srcImage withMapImage:mapImage skipColoredSource:YES];
+//インスタンスを生成しない方法
+NSImage* output=[HTMangaColorize colorizeImage:srcImg withMapImage:mapImg skipColoredSource:YES];
 ```
 
 `skipColoredSource` が `YES` の場合、画像の彩度をチェックし、カラー画像と判定された場合は着色を行わずにそのまま返します。`NO` ではすべて着色します。
