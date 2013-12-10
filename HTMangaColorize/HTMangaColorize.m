@@ -107,7 +107,10 @@
         rectToCheck.origin.y += floor((height-CGRectGetHeight(rectToCheck))/2);
         
         ciFilter = [CIFilter filterWithName:@"CIAreaAverage" keysAndValues:kCIInputImageKey, srcCI,
-                    kCIInputExtentKey, [CIVector vectorWithCGRect:rectToCheck],
+                    kCIInputExtentKey, [CIVector vectorWithX:rectToCheck.origin.x
+                                                           Y:rectToCheck.origin.y
+                                                           Z:rectToCheck.size.width
+                                                           W:rectToCheck.size.height],
                     nil];
         CIImage* pixImage=[ciFilter valueForKey:@"outputImage"];
         NSBitmapImageRep *aPixel = [[NSBitmapImageRep alloc]initWithCIImage:pixImage];
