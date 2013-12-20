@@ -94,7 +94,6 @@
     CIImage *srcCI= [[CIImage alloc]initWithBitmapImageRep:srcRep];
 
 #if !__has_feature(objc_arc)
-    [srcRep autorelease];
     [srcCI autorelease];
 #endif
     
